@@ -1,5 +1,6 @@
 {
     "name": "phyrus/project",
+    "version": "1.0",
     "description": "Phyrus framework create project.",
     "type": "project",
     "license": "MIT",

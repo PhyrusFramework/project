@@ -1,0 +1,13 @@
+{
+    "development_mode": true,
+    "log_errors": true,
+    "tests": {
+        "alternativeDatabase": {
+            "type": "mysql",
+            "host": "localhost",
+            "database": "test",
+            "username": "root",
+            "password": ""
+        }
+    }
+}

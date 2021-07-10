@@ -1,0 +1,3 @@
+<?php
+
+Phyrus::WelcomePage();

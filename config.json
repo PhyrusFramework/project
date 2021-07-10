@@ -1,0 +1,42 @@
+{
+    "root": "",
+    "environment": "dev",
+    "development_mode": false,
+    "log_errors": false,
+    "database": {
+        "type": "mysql",
+        "host": "localhost",
+        "database": "name",
+        "username": "root",
+        "password": ""
+    },
+    "CORS": {
+        "origin": "*",
+        "methods": "GET, POST, OPTIONS, PUT, DELETE, PATCH",
+        "age": 86400
+    },
+    "framework-assets": {
+        "javascript": {
+            "jquery": true,
+            "data-binding": true,
+            "modals": true
+        },
+        "css": {
+            "grid": true,
+            "reset": true,
+            "lib": true
+        }
+    },
+    "tests": {
+        "alternativeDatabase": null
+    },
+    "cache": {
+        "enabled": false,
+        "assets": false,
+        "dom": false,
+        "days": 10,
+        "hours": 0,
+        "minutes": 0,
+        "seconds": 0
+    }
+}

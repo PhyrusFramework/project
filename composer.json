@@ -1,0 +1,15 @@
+{
+    "name": "phyrus/project",
+    "description": "Phyrus framework create project.",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Phyrus",
+            "email": "framework@phyrus.org"
+        }
+    ],
+    "require": {
+        "phyrus/framework": "0.0.1"
+    }
+}

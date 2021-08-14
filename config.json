@@ -1,7 +1,7 @@
 {
     "root": "",
     "environment": "dev",
-    "development_mode": false,
+    "development_mode": true,
     "log_errors": false,
     "database": {
         "type": "mysql",
@@ -19,7 +19,8 @@
         "javascript": {
             "jquery": true,
             "data-binding": true,
-            "modals": true
+            "http": true,
+            "validator": true
         },
         "css": {
             "grid": true,

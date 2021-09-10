@@ -2,9 +2,9 @@
 
 class DefaultMiddleware extends Middleware {
 
-    public function display($controller = null) {
+    public function display() {
 
-        $controller->display();
+        $this->controller->display();
 
     }
 

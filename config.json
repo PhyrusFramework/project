@@ -1,8 +1,12 @@
 {
+    "title": "Phyrus project",
+    "version": "1.0",
+
     "root": "",
     "environment": "dev",
     "development_mode": true,
     "log_errors": false,
+
     "database": {
         "type": "mysql",
         "host": "localhost",
@@ -10,11 +14,14 @@
         "username": "root",
         "password": ""
     },
+
     "CORS": {
         "origin": "*",
         "methods": "GET, POST, OPTIONS, PUT, DELETE, PATCH",
+        "headers": "*",
         "age": 86400
     },
+
     "framework-assets": {
         "javascript": {
             "jquery": true,
@@ -28,9 +35,11 @@
             "lib": true
         }
     },
+
     "tests": {
         "alternativeDatabase": null
     },
+    
     "cache": {
         "enabled": false,
         "assets": false,

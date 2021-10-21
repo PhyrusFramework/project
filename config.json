@@ -5,7 +5,7 @@
     "root": "",
     "environment": "dev",
     "development_mode": true,
-    "log_errors": false,
+    "log_errors": true,
 
     "database": {
         "type": "mysql",
@@ -22,12 +22,13 @@
         "age": 86400
     },
 
-    "framework-assets": {
-        "javascript": {
-            "jquery": true,
-            "data-binding": true,
+    "assets": {
+        "disable-browser-cache": false,
+        "js": {
+            "vue": true,
+            "utils": true,
             "http": true,
-            "validator": true
+            "time": false
         },
         "css": {
             "grid": true,

@@ -11,9 +11,9 @@
         }
     ],
     "require": {
-        "phyrus/framework": "^0.0.5",
-        "phyrus/mails": "^0.0.5",
-        "phyrus/ui": "^0.0.5"
+        "phyrus/framework": "~0.0.6",
+        "phyrus/mails": "~0.0.6",
+        "phyrus/ui": "~0.0.6"
     },
     "phyrus-modules": {
         "phyrus/apidoc": "Generate a documentation for your API really fast and simple.",

@@ -2,7 +2,6 @@
     "title": "Phyrus project",
     "version": "1.0",
 
-    "root": "",
     "environment": "dev",
     "development_mode": true,
     "log_errors": true,

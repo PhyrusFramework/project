@@ -22,7 +22,7 @@
     },
 
     "assets": {
-        "disable-browser-cache": false,
+        "disable-cache-after-modification-for-x-hours": 1,
         "js": {
             "vue": true,
             "utils": true,

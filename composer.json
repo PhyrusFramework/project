@@ -1,6 +1,6 @@
 {
     "name": "phyrus/project",
-    "version": "1.6",
+    "version": "1.7",
     "description": "Phyrus framework create project.",
     "type": "project",
     "license": "MIT",
@@ -11,9 +11,9 @@
         }
     ],
     "require": {
-        "phyrus/framework": "^0.0.7",
-        "phyrus/mails": "^0.0.7",
-        "phyrus/ui": "^0.0.7"
+        "phyrus/framework": "^0.0.8",
+        "phyrus/mails": "^0.0.8",
+        "phyrus/ui": "^0.0.8"
     },
     "phyrus-modules": {
         "phyrus/apidoc": "Generate a documentation for your API really fast and simple.",

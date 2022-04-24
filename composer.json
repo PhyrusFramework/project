@@ -1,6 +1,6 @@
 {
     "name": "phyrus/project",
-    "version": "1.8",
+    "version": "1.9",
     "description": "Phyrus framework create project.",
     "type": "project",
     "license": "MIT",
@@ -11,17 +11,7 @@
         }
     ],
     "require": {
-        "phyrus/framework": "^0.0.9",
-        "phyrus/mails": "^0.0.8",
-        "phyrus/ui": "^0.0.8"
-    },
-    "phyrus-modules": {
-        "phyrus/apidoc": "Generate a documentation for your API really fast and simple.",
-        "phyrus/auth": "Easy signup-signin and User management system.",
-        "phyrus/mails": "Generate and send emails.",
-        "phyrus/maps": "Display maps using Google Maps API.",
-        "phyrus/pdf": "Generate, display and download pdf documents using HTML.",
-        "phyrus/stripe": "Manage payments with Stripe.",
-        "phyrus/ui": "UI components, assets and helpers for Vue and Front-End."
+        "phyrus/framework": "^0.1.0",
+        "phyrus/mails": "^0.0.8"
     }
 }

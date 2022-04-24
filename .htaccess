@@ -15,16 +15,21 @@
 # Apache 2.2
 <IfModule !mod_authz_core.c>
 
-    # Deny access to .htaccess
-    <Files .htaccess>
-    Order allow,deny
-    Deny from all
-    </Files>
-
-    # Deny access to files with extensions .ini, .json, .log
-    <FilesMatch "\.(json|ini|log)$">
+    # Deny access to files starting with .
+    <FilesMatch "^\.">
         Order allow,deny
         Deny from all
+    </FilesMatch>
+
+    <FilesMatch ^>
+        Order allow, deny
+        Deny from all
+    </FilesMatch>
+
+    # Allow front files
+    <FilesMatch "\.(css|js|jpg|jpeg|png|ico|gif|mp4|avi)$">
+        Order allow,deny
+        Allow from all
     </FilesMatch>
 
     # Deny access to all PHP files except for index.php
@@ -44,14 +49,18 @@
 # Apache 2.4
 <IfModule mod_authz_core.c>
     
-    # Deny access to .htaccess
-    <Files .htaccess>
-    Require all denied
-    </Files>
+    # Deny access to files starting with .
+    <FilesMatch "^\.">
+        Require all denied
+    </FilesMatch>
 
-    # Deny access to files with extensions .ini, .json, .log
-    <FilesMatch "\.(json|ini|log)$">
-    Require all denied
+    <FilesMatch ".\..">
+        Require all denied
+    </FilesMatch>
+
+    # Allow front files
+    <FilesMatch "\.(css|js|jpg|jpeg|png|ico|gif|mp3|mp4|avi)$">
+        Require all granted
     </FilesMatch>
 
     # Deny access to all PHP files except for index.php

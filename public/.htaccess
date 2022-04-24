@@ -1,0 +1,42 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    RewriteBase /
+    RewriteRule ^index\.php$ - [L]
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule . /index.php [L]
+
+</IfModule>
+
+# Apache 2.2
+<IfModule !mod_authz_core.c>
+
+    # Allow all other files
+    <FilesMatch ^>
+        Order allow,deny
+        Allow from all
+    </FilesMatch>
+
+    # Deny access to files starting with .
+    <FilesMatch "^\.">
+        Order allow,deny
+        Deny from all
+    </FilesMatch>
+
+</IfModule>
+
+# Apache 2.4
+<IfModule mod_authz_core.c>
+    
+    # Allow all other files
+    <FilesMatch ^>
+        Require all granted
+    </FilesMatch>
+
+    # Deny access to files starting with .
+    <FilesMatch "^\.">
+        Require all denied
+    </FilesMatch>
+
+</IfModule>

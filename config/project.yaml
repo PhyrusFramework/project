@@ -1,0 +1,6 @@
+title: Phyrus project
+version: "1.0"
+
+environment: dev
+development_mode: true
+log_errors: true

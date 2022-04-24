@@ -1,0 +1,11 @@
+headers:
+  x-frame-options: SAMEORIGIN
+  content-security-policy: default-src 'self' 'unsafe-inline' 'unsafe-eval'
+  cache-control: public, max-age=31536000
+  x-content-type-options: nosniff
+
+CORS:
+  origin: "*"
+  methods: GET, POST, OPTIONS, PUT, DELETE, PATCH
+  headers: "*"
+  age": 86400

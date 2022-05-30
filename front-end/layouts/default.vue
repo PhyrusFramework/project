@@ -1,11 +1,15 @@
 <template>
 <div>
-    <Nuxt />
+    <page-content />
 </div>
 </template>
 
 <script lang="ts">
-import { AppComponent } from 'phyrus-nuxt';
+import { AppComponent, PageContent } from 'phyrus-nuxt';
 
-export default AppComponent.extend({ });
+export default AppComponent.extend({
+
+    components: {PageContent}
+
+});
 </script>

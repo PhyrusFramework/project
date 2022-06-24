@@ -4,3 +4,14 @@ version: "1.0"
 environment: dev
 development_mode: true
 log_errors: true
+
+uploads:
+  publicDir: "uploads"
+  privateDir: "uploads"
+  images:
+    dir: "images"
+    sizes:
+      small: 300
+      medium: 550
+      large: 900
+      hd: 1500

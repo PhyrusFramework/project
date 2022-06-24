@@ -4,7 +4,7 @@ headers:
   x-content-type-options: nosniff
   content-security-policy:
     default-src: "'self' 'unsafe-inline' 'unsafe-eval'"
-    img-src: *
+    img-src: "* 'self' data: https:"
     font-src: *
     frame-src: *
     style-src-elem: * 'unsafe-inline'

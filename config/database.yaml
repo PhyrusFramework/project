@@ -4,4 +4,5 @@ database: test
 username: root
 password: ""
 
+debug: false
 forTests: null

@@ -51,5 +51,12 @@ export default {
   ],
 
   build: {
+    postcss: {
+      preset: {
+        features: {
+          "focus-within-pseudo-class": false
+        }
+      }
+    }
   }
 }

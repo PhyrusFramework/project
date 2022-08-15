@@ -1,2 +1,3 @@
 <?php
+// CLI
 require_once(__DIR__ . '/vendor/phyrus/framework/phpcli/loader.php');

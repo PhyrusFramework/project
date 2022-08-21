@@ -27,3 +27,4 @@ composer.lock
 /vendor
 /node_modules
 /generated
+/www

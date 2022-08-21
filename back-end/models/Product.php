@@ -1,5 +1,7 @@
 <?php
 
+// EXAMPLE: Product model using ORM
+
 class Product extends ORM {
 
     public function Definition($builder) {

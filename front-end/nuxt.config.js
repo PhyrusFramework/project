@@ -44,19 +44,18 @@ export default {
   ],
 
   generate: {
-    dir: '../public'
+    dir: '../www'
   },
 
   modules: [
   ],
 
   build: {
-    postcss: {
-      preset: {
-        features: {
-          "focus-within-pseudo-class": false
-        }
-      }
+    postcss: null,
+
+    extend(config, { isDev, isClient }) {
+      config.performance.hints = false;
+      config.performance.maxEntrypointSize = 2048000;
     }
   }
 }

@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{843:function(e,n,t){"use strict";t.r(n);var o=t(0),l=t(57),c=o.a.extend({components:{PhyrusWelcome:l.i}}),r=t(2),component=Object(r.a)(c,(function(){var e=this._self._c;this._self._setupProxy;return e("phyrus-welcome")}),[],!1,null,null,null);n.default=component.exports}}]);

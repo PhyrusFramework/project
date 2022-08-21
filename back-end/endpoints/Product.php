@@ -1,13 +1,27 @@
 <?php
 
-// Endpoints for model Product
+// EXAMPLE: Endpoints for model Product
 CRUD::instance('/api/products')
+
+// ->middleware('default')
 
 // GET /api/products
 ->list(function($req) {
 
-    $products = Product::find();
-    return $products;
+    // Pagination offset
+    $offset = $req->has('offset') ? intval($req->offset) : 0;
+
+    $q = Product::query()
+        ->limit(20)
+        ->offset($offset);
+
+    $total = $q->count();
+    $products = $q->get();
+
+    return ApiResponse::paginate($products, [
+        'pageSize' => 20,
+        'total' => $total
+    ]);
 
 })
 
@@ -25,26 +39,49 @@ CRUD::instance('/api/products')
     $product->save();
 
     return $product;
+    // or
+    return ApiResponse::success($product); // wraps answer
 })
 
 // GET /api/products/:id
-->get(function($req, $id) {
+->get(function($req, $params) {
 
-    $product = Product::findID($id);
-    // Or
+    $product = Product::findID($params->id);
+    // or
     $product = Product::findOne('ID = :ID', [
-        'ID' => intval($id)
+        'ID' => intval($params->id)
     ]);
+    // or
+    $product = Product::query()
+        ->where('ID', intval($params->id))
+        ->first();
 
     if (!$product) {
-        // Response 400 Bad Request
-        response_die('bad', [
-            'error' => 'Product does not exist'
-        ]);
+        // Response 404 Not found
+        ApiResponse::notFound();
     }
 
     return $product;
 
+})
+
+// DELETE /api/produucts/:id
+->delete(function($req, $params) {
+
+    $product = Product::findID($params->id);
+
+    if (!$product) {
+        // Response 404 Not found
+        ApiResponse::notFound();
+    }
+
+    $product->delete();
+
+})
+
+// POST /api/products/:id/like
+->custom('POST', '/:id/like', function($req, $params) {
+    // Do something
 })
 
 // Add routes

@@ -1,6 +1,6 @@
 {
     "name": "phyrus/project",
-    "version": "2.0.0",
+    "version": "2.0.3",
     "description": "Phyrus framework create project.",
     "type": "project",
     "license": "MIT",
@@ -11,6 +11,6 @@
         }
     ],
     "require": {
-        "phyrus/framework": ">=2.0.0"
+        "phyrus/framework": ">=2.0.3"
     }
 }

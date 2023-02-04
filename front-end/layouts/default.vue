@@ -7,7 +7,7 @@
 <script lang="ts">
 import { AppComponent, PageContent } from 'phyrus-nuxt';
 
-export default AppComponent.extend({
+export default AppComponent().extend({
 
     components: {PageContent}
 

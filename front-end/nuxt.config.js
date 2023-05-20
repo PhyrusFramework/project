@@ -1,8 +1,10 @@
 import config from './project.config';
 
 let families = {}
-for(let family of config.theme.fonts) {
-  families[family.family] = family.weights;
+if (config.googleFonts) {
+  for(let family of config.googleFonts) {
+    families[family.family] = family.weights;
+  }
 }
 
 export default {
@@ -32,7 +34,11 @@ export default {
     families: families
   },
 
-  css: ['phyrus-nuxt/src/css/index.css', 'global.scss'],
+  css: [
+    'variables.scss',
+    'phyrus-nuxt/src/css/index.css', 
+    'global.scss'
+  ],
 
   plugins: ['init.ts'],
 
@@ -51,7 +57,7 @@ export default {
   ],
 
   build: {
-    postcss: null,
+    postcss: {},
 
     extend(config, { isDev, isClient }) {
       config.performance.hints = false;
